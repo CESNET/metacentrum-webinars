@@ -15,7 +15,7 @@ The course is held online and is taught in Czech.
 - [e-INFRA CZ documentation](https://docs.e-infra.cz/)
 - [Contact for MetaCentrum user support](https://docs.metacentrum.cz/en/docs/support)
 - [MetaCentrum documentation](https://docs.metacentrum.cz/)
-- [MetaCentrum monitoring page](https://pbsmon.metacentrum.cz/)
+- [MetaCentrum monitoring page](https://my.metacentrum.cz/personal-view)
 - [MetaCentrum hands-on courses](https://github.com/CESNET/metacentrum-hands-on)
 - [MetaCentrum past seminars](https://metavo.metacentrum.cz/cs/seminars/)
 - [Linking an ORCID iD to an e-INFRA CZ account](https://docs.account.e-infra.cz/en/docs/access/orcid)

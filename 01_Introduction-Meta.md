@@ -144,13 +144,53 @@ plt.show()
 qsub -I -N Test_job -l select=1:ncpus=2:mem=4gb:scratch_local=1gb -l walltime=1:00:00
 ```
 
+## Foldify and AlphaFind protein sequence example
+```shell
+>sp|A0PK11|CLRN2_HUMAN_Clarin-2_OS=Homo_sapiens
+MPGWFKKAWYGLASLLSFSSFILIIVALVVPHWLSGKILCQTGVDLVNATDRELVKFIGDIYYGLFRGCKVRQCGLGGRQSQFTIFPHLVKELNAGLHVMILLLLFLALALALVSMGFAILNMIQVPYRAVSGPGGICLWNVLAGGVVALAIASFVAAVKFHDLTERIANFQEKLFQFVVVEEQYEESFWICVASASAHAANLVVVAISQIPLPEIKTKIEEATVTAEDILY
+```
 
+## Access S3 storage
 
+```shell
 
+```
 
+```shell
 
+```
 
+```shell
 
+```
+
+```shell
+
+```
+
+```shell
+
+```
+
+```shell
+
+```
+
+```shell
+
+```
+
+```shell
+
+```
+
+```shell
+
+```
+
+```shell
+
+```
 
 
 

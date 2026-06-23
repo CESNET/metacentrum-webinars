@@ -153,56 +153,56 @@ MPGWFKKAWYGLASLLSFSSFILIIVALVVPHWLSGKILCQTGVDLVNATDRELVKFIGDIYYGLFRGCKVRQCGLGGRQ
 ## Access S3 storage
 
 ```shell
-
+s3cmd ls
 ```
-
 ```shell
-
+s3cmd ls s3://meta-archive
 ```
-
 ```shell
-
+s3cmd mb s3://testbucket
 ```
-
 ```shell
-
+s3cmd ls
 ```
-
 ```shell
-
+s3cmd ls s3://testbucket
 ```
-
 ```shell
-
+s3cmd rb s3://testbucket
 ```
-
 ```shell
-
+s3cmd ls
 ```
-
 ```shell
-
+s3cmd put dorado_basecalling.sh s3://meta-archive
 ```
-
 ```shell
-
+s3cmd ls s3://meta-archive
 ```
-
 ```shell
-
+s3cmd put -r Folder_example s3://meta-archive
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
+```shell
+s3cmd ls s3://meta-archive
+```
+```shell
+s3cmd ls s3://meta-archive/Folder_example/
+```
+```shell
+s3cmd get s3://meta-archive/dorado_basecalling.sh
+```
+```shell
+s3cmd get s3://meta-archive/dorado_basecalling.sh
+```
+```shell
+s3cmd get --skip-existing s3://meta-archive/dorado_basecalling.sh
+```
+```shell
+s3cmd get --force s3://meta-archive/dorado_basecalling.sh
+```
+```shell
+s3cmd del s3://meta-archive/dorado_basecalling.sh
+```
+```shell
+s3cmd del -r s3://meta-archive/Folder_example/
+```

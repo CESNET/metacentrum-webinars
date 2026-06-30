@@ -2,7 +2,7 @@
 
 This readme was created by Jiří Vorel (vorel@cesnet.cz).
 
-Speaker: Lukáš Hejtmánek (CERIT-SC)
+Speaker: Lukáš Hejtmánek ([CERIT-SC](https://www.cerit-sc.cz/))
 
 The information provided in this webinar is current as of 20 July 2026.
 

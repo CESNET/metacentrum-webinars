@@ -6,5 +6,5 @@
 - [Registration](https://metavo.metacentrum.cz/cs/news/novinka_2026_0010.html)
 - [Presentation](https://metavo.metacentrum.cz/export/sites/meta/cs/seminars/Meta_webinar-1-26-mensi.pdf)
 
-## 2. LLM, 20. 7. 2026
+## 2. [Practical use of AI tools](02_AI-Meta.md), 20. 7. 2026
 - [Registration](https://metavo.metacentrum.cz/cs/news/novinka_2026_0014.html)

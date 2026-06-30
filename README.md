@@ -7,3 +7,4 @@
 - [Presentation](https://metavo.metacentrum.cz/export/sites/meta/cs/seminars/Meta_webinar-1-26-mensi.pdf)
 
 ## 2. LLM, 20. 7. 2026
+- [Registration](https://metavo.metacentrum.cz/cs/news/novinka_2026_0014.html)

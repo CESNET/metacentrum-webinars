@@ -8,3 +8,5 @@
 
 ## 2. [Practical use of AI tools](02_AI-Meta.md), 20. 7. 2026
 - [Registration](https://metavo.metacentrum.cz/cs/news/novinka_2026_0014.html)
+- [Presentation](https://metavo.metacentrum.cz/export/sites/meta/cs/seminars/MetaWebinar2-AI2026-CERIT-SC.pdf)
+- [Pool](https://slido.cloud.e-infra.cz/e/dabop)

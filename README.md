@@ -11,6 +11,6 @@
 - [Presentation](https://metavo.metacentrum.cz/export/sites/meta/cs/seminars/MetaWebinar2-AI2026-CERIT-SC.pdf)
 - [Pool](https://slido.cloud.e-infra.cz/e/dabop)
 
-## 3. [Introduction to MetaCentrum](03_Data-Meta.md), 2. 9. 2026
+## 3. [Data handling](03_Data-Meta.md), 2. 9. 2026
 - [Registration](https://metavo.metacentrum.cz/cs/news/novinka_2026_0018.html)
 - [Presentation]()

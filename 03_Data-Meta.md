@@ -215,7 +215,7 @@ s3cmd del -r s3://meta-archive/Test_data/
 s3cmd ls s3://meta-archive
 ```
 
-## Data sharing within a group
+## Data sharing
 
 ```shell
 mkdir test_shared_dir

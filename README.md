@@ -17,3 +17,8 @@
 - [Registration](https://metavo.metacentrum.cz/cs/news/novinka_2026_0018.html)
 - [Presentation](https://metavo.metacentrum.cz/export/sites/meta/cs/seminars/2026_Meta_webinarIII_data.pdf)
 - [Recording](https://youtu.be/88XxGGqRuKE)
+
+## 4. [SW installation](04_SW-Meta.md), 2. 9. 2026
+- [Registration](https://metavo.metacentrum.cz/cs/news/novinka_2026_0022.html)
+- [Presentation]()
+- [Recording]()

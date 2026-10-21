@@ -65,6 +65,38 @@ export MODULEPATH=/storage/brno2/home/vorel/WEB_INSTALL/:$MODULEPATH
 module ava salmon
 ```
 
+```shell
+#!/bin/bash
+#PBS -l walltime=1:0:0
+#PBS -l select=1:ncpus=4:mem=10gb:scratch_ssd=5gb
+#PBS -N Salmon_test_job
+
+trap "clean_scratch" TERM EXIT
+cd $SCRATCHDIR
+cp /storage/brno2/home/vorel/WEB_INSTALL/nucl_ref_for_salmon.fa $SCRATCHDIR
+cp /storage/brno2/home/vorel/WEB_INSTALL/mapped_reads_sorted_for_salmon.bam $SCRATCHDIR
+
+# How to start Salmon?
+
+# 1)
+cp /storage/brno2/home/vorel/WEB_INSTALL/salmon/salmon $SCRATCHDIR
+./salmon quant -t nucl_ref_for_salmon.fa -p 1 -a mapped_reads_sorted_for_salmon.bam -o output.txt
+
+# 2)
+/storage/brno2/home/vorel/WEB_INSTALL/salmon/salmon quant -t nucl_ref_for_salmon.fa -p 1 -a mapped_reads_sorted_for_salmon.bam -o output.txt
+
+# 3)
+export PATH=/storage/brno2/home/vorel/WEB_INSTALL/salmon/:$PATH
+salmon quant -t nucl_ref_for_salmon.fa -p 1 -a mapped_reads_sorted_for_salmon.bam -o output.txt
+
+# 4)
+export MODULEPATH=/storage/brno2/home/vorel/WEB_INSTALL/:$MODULEPATH
+module add salmon_2.8.0_local
+salmon quant -t nucl_ref_for_salmon.fa -p 1 -a mapped_reads_sorted_for_salmon.bam -o output.txt
+
+cp output.txt /storage/brno2/home/vorel/WEB_INSTALL/ || export CLEAN_SCRATCH=false
+```
+
 # Precompiled binary with a dependency
 
 ```shell
@@ -396,10 +428,6 @@ singularity build ariba_sing.img docker://sangerpathogens/ariba:latest
 ```
 
 ```shell
-singularity exec trinityrnaseq.v2.15.2.simg Trinity --help
-```
-
-```shell
 singularity exec ariba_sing.img ariba --help
 ```
 
@@ -471,4 +499,181 @@ singularity build -f my_image_pylibs.sif my_test_sing.sbox
 
 ```shell
 singularity exec my_image_pylibs.sif /opt/venv/bin/python -c "import numpy,scipy,pandas as p;[print(f'{m.__name__} - {m.__version__} - OK') for m in (numpy,scipy,p)]"
+```
+# Building and compiling
+
+```shell
+qsub -I -l walltime=01:00:00 -l select=1:ncpus=2:mem=10gb:scratch_local=10gb
+```
+
+```shell
+export TMPDIR=$SCRATCHDIR
+```
+
+```shell
+cd /storage/brno2/home/vorel/WEB_INSTALL/
+```
+
+```shell
+wget https://github.com/samtools/samtools/releases/download/1.24/samtools-1.24.tar.bz2
+```
+
+```shell
+tar -xf samtools-1.24.tar.bz2
+```
+
+```shell
+mkdir samtools_install
+```
+
+```shell
+cd samtools-1.24
+```
+
+```shell
+./configure --help
+```
+
+```shell
+./configure --prefix=/storage/brno2/home/vorel/WEB_INSTALL/samtools_install/
+```
+
+```shell
+make -j2
+```
+
+```shell
+make -j2 install
+```
+
+```shell
+cd ../samtools_install/
+```
+
+```shell
+export PATH=/storage/brno2/home/vorel/WEB_INSTALL/samtools_install/bin/:$PATH
+```
+
+```shell
+samtools --version
+```
+
+```shell
+qsub -I -l walltime=01:00:00 -l select=1:ncpus=2:mem=10gb:scratch_local=10gb
+```
+
+```shell
+export TMPDIR=$SCRATCHDIR
+```
+
+```shell
+cd /storage/brno2/home/vorel/WEB_INSTALL/
+```
+
+```shell
+mkdir samtools_install_intel
+```
+
+```shell
+rm -rf samtools-1.24
+```
+
+```shell
+tar -xf samtools-1.24.tar.bz2
+```
+
+```shell
+cd samtools-1.24
+```
+
+```shell
+module add intel-oneapi-compilers
+```
+
+```shell
+export CC=icx
+```
+
+```shell
+./configure --prefix=/storage/brno2/home/vorel/WEB_INSTALL/samtools_install_intel/
+```
+
+```shell
+make -j2
+```
+
+```shell
+make -j2 install
+```
+
+```shell
+cd ../samtools_install_intel/
+```
+
+```shell
+export PATH=/storage/brno2/home/vorel/WEB_INSTALL/samtools_install_intel/bin/:$PATH
+```
+
+```shell
+samtools --version
+```
+
+```shell
+qsub -I -l walltime=01:00:00 -l select=1:ncpus=2:mem=10gb:scratch_local=10gb
+```
+
+```shell
+export TMPDIR=$SCRATCHDIR
+```
+
+```shell
+cd /storage/brno2/home/vorel/WEB_INSTALL/
+```
+
+```shell
+module add aocc
+```
+
+```shell
+mkdir samtools_install_aocc
+```
+
+```shell
+rm -rf samtools-1.24
+```
+
+```shell
+tar -xf samtools-1.24.tar.bz2
+```
+
+```shell
+cd samtools-1.24
+```
+
+```shell
+export CC=clang
+```
+
+```shell
+./configure --prefix=/storage/brno2/home/vorel/WEB_INSTALL/samtools_install_aocc/
+```
+
+```shell
+make -j2
+```
+
+```shell
+make -j2 install
+```
+
+```shell
+cd ../samtools_install_aocc/
+```
+
+```shell
+export PATH=/storage/brno2/home/vorel/WEB_INSTALL/samtools_install_aocc/bin/:$PATH
+```
+
+```shell
+samtools --version
 ```

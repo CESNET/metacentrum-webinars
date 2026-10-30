@@ -21,4 +21,4 @@
 ## 4. [SW installation](04_SW-Meta.md), 21. 10. 2026
 - [Registration](https://metavo.metacentrum.cz/cs/news/novinka_2026_0022.html)
 - [Presentation](https://metavo.metacentrum.cz/export/sites/meta/cs/seminars/2026_Meta_webinar_IV.pdf)
-- [Recording]()
+- [Recording](https://youtu.be/KvfIknX3Bf4)
